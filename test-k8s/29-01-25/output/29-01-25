@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: sidhu-cluster
+  region: us-east-1
+
+managedNodeGroups:
+  - name: sidhu-cluster-group-1
+    instanceType: t3a.small
+    minSize: 1
+    maxSize: 4
+    desiredCapacity: 2
+    #spot: true # not for production
