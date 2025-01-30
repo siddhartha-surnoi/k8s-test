@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: FE-zomato
+spec:
+  containers:
+  - name: zomato
+    image: sidhu12309/zomato:latest
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "1024Mi"
+        cpu: "720m"
+    ports:
+      - containerPort: 3000
